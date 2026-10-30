@@ -9,7 +9,7 @@
   <meta name="description" content="還在每天手動複製貼上整理客戶資料嗎？提供客製化表單自動化串接服務，讓 Google 試算表填單後 0.1 秒自動發送 Telegram 手機通知，省時零漏單，歡迎預約免費諮詢！">
   <meta name="keywords" content="表單自動化, Google試算表串接, 自動發送Telegram, 手動Key單自動化, 省時間工具, 免費自動化諮詢">
 
-  <!-- Open Graph / 社群分享預覽（發在 LINE / FB 時會顯示這段） -->
+  <!-- Open Graph / 社群分享預覽 -->
   <meta property="og:title" content="告別手動Key單！Google表單/試算表自動通知 Telegram 串接服務">
   <meta property="og:description" content="填單資料 0.1 秒自動同步試算表與手機通知，省時省力不漏單。點擊預約免費自動化諮詢！">
   <meta property="og:type" content="website">
@@ -76,6 +76,71 @@
       color: #94a3b8;
       line-height: 1.5;
     }
+
+    /* 作品展示區塊樣式 */
+    .portfolio-section {
+      margin-bottom: 32px;
+      padding: 20px;
+      background-color: #0f172a;
+      border-radius: 12px;
+      border: 1px solid #38bdf8;
+    }
+    .portfolio-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+    }
+    .portfolio-title {
+      font-size: 16px;
+      font-weight: 600;
+      color: #38bdf8;
+    }
+    .portfolio-badge {
+      font-size: 12px;
+      background-color: rgba(56, 189, 248, 0.1);
+      color: #38bdf8;
+      padding: 4px 8px;
+      border-radius: 4px;
+      border: 1px solid rgba(56, 189, 248, 0.3);
+    }
+    .portfolio-desc {
+      font-size: 13px;
+      color: #94a3b8;
+      margin-bottom: 16px;
+      line-height: 1.5;
+    }
+    .portfolio-preview {
+      width: 100%;
+      height: 220px;
+      border-radius: 8px;
+      border: 1px solid #334155;
+      background-color: #1e293b;
+      overflow: hidden;
+      margin-bottom: 12px;
+    }
+    .portfolio-iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+    .portfolio-link {
+      display: inline-block;
+      width: 100%;
+      text-align: center;
+      padding: 10px;
+      background-color: #334155;
+      color: #38bdf8;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 600;
+      border-radius: 6px;
+      transition: background-color 0.2s;
+    }
+    .portfolio-link:hover {
+      background-color: #475569;
+    }
+
     .form-group {
       margin-bottom: 20px;
     }
@@ -153,6 +218,24 @@
         <h3>03. 自動客戶致謝與跟進</h3>
         <p>系統自動發送確認信件，提升客製化專業感。</p>
       </div>
+    </div>
+
+    <!-- 實體作品 Card 區塊 -->
+    <div class="portfolio-section">
+      <div class="portfolio-header">
+        <span class="portfolio-title">📌 精選作品展示：響應式互動 Card</span>
+        <span class="portfolio-badge">Live Demo</span>
+      </div>
+      <p class="portfolio-desc">前端靈活排版與動態互動成果展示，兼具手機與電腦端完美載入體驗：</p>
+      
+      <!-- 作品即時預覽視窗 (改為大寫 CARD) -->
+      <div class="portfolio-preview">
+        <iframe src="https://crazymankey.github.io/CARD/" class="portfolio-iframe" title="Card 作品展示"></iframe>
+      </div>
+      
+      <a href="https://crazymankey.github.io/CARD/" target="_blank" class="portfolio-link">
+        🔗 點擊全螢幕體驗 Card 作品 ↗
+      </a>
     </div>
 
     <form id="leadForm">
