@@ -34,7 +34,7 @@
       padding: 20px 16px;
     }
 
-    /* 頂部導覽列 */
+    /* 頂部輕量導覽列 */
     .navbar {
       width: 100%;
       max-width: 650px;
@@ -311,26 +311,28 @@
       </ul>
     </div>
 
-    <!-- 04 表單區塊 -->
-    <form id="contact" id="leadForm">
-      <div class="form-group">
-        <label for="name">您的姓名 / 稱呼</label>
-        <input type="text" id="name" required placeholder="例如：李先生">
-      </div>
+    <!-- 04 表單區塊 (修復 id 重複問題) -->
+    <div id="contact">
+      <form id="leadForm">
+        <div class="form-group">
+          <label for="name">您的姓名 / 稱呼</label>
+          <input type="text" id="name" required placeholder="例如：李先生">
+        </div>
 
-      <div class="form-group">
-        <label for="contact-info">聯絡方式 (LINE ID 或 Email)</label>
-        <input type="text" id="contact-info" required placeholder="例如：line_id_123 或 name@email.com">
-      </div>
+        <div class="form-group">
+          <label for="contact-info">聯絡方式 (LINE ID 或 Email)</label>
+          <input type="text" id="contact-info" required placeholder="例如：line_id_123 或 name@email.com">
+        </div>
 
-      <div class="form-group">
-        <label for="need">目前最困擾你、想自動化的流程是什麼？</label>
-        <textarea id="need" required placeholder="例如：每天要手動複製資料到 Excel，想改成自動帶入..."></textarea>
-      </div>
+        <div class="form-group">
+          <label for="need">目前最困擾你、想自動化的流程是什麼？</label>
+          <textarea id="need" required placeholder="例如：每天要手動複製資料到 Excel，想改成自動帶入..."></textarea>
+        </div>
 
-      <button type="submit" id="submitBtn">送出需求，取得免費評估</button>
-      <div id="statusMsg" class="status-msg"></div>
-    </form>
+        <button type="submit" id="submitBtn">送出需求，取得免費評估</button>
+        <div id="statusMsg" class="status-msg"></div>
+      </form>
+    </div>
   </div>
 
   <script>
