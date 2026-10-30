@@ -21,65 +21,98 @@
       padding: 0;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     }
+    html {
+      scroll-behavior: smooth;
+    }
     body {
       background-color: #0f172a;
       color: #f8fafc;
       display: flex;
-      justify-content: center;
+      flex-direction: column;
       align-items: center;
       min-height: 100vh;
-      padding: 20px;
+      padding: 20px 16px;
     }
+
+    /* 頂部導覽列 */
+    .navbar {
+      width: 100%;
+      max-width: 650px;
+      display: flex;
+      justify-content: space-around;
+      background-color: #1e293b;
+      padding: 12px;
+      border-radius: 30px;
+      margin-bottom: 24px;
+      border: 1px solid #334155;
+      position: sticky;
+      top: 10px;
+      z-index: 100;
+    }
+    .navbar a {
+      color: #94a3b8;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 6px 12px;
+      border-radius: 20px;
+      transition: all 0.2s;
+    }
+    .navbar a:hover {
+      color: #38bdf8;
+      background-color: rgba(56, 189, 248, 0.1);
+    }
+
     .container {
       width: 100%;
       max-width: 650px;
       background-color: #1e293b;
-      padding: 40px;
+      padding: 32px 24px;
       border-radius: 16px;
       box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
       border: 1px solid #334155;
     }
     .header {
       text-align: center;
-      margin-bottom: 32px;
+      margin-bottom: 28px;
     }
     .header h1 {
-      font-size: 28px;
+      font-size: 26px;
       font-weight: 700;
       color: #ffffff;
-      margin-bottom: 12px;
+      margin-bottom: 10px;
     }
     .header p {
       color: #94a3b8;
-      font-size: 15px;
-      line-height: 1.6;
+      font-size: 14px;
+      line-height: 1.5;
     }
     .features {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 16px;
-      margin-bottom: 32px;
+      grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+      gap: 12px;
+      margin-bottom: 28px;
     }
     .card {
       background-color: #0f172a;
-      padding: 16px;
+      padding: 14px;
       border-radius: 8px;
       border: 1px solid #334155;
     }
     .card h3 {
-      font-size: 14px;
+      font-size: 13px;
       color: #38bdf8;
-      margin-bottom: 8px;
+      margin-bottom: 6px;
     }
     .card p {
       font-size: 12px;
       color: #94a3b8;
-      line-height: 1.5;
+      line-height: 1.4;
     }
 
-    /* 作品展示區塊樣式 */
+    /* 作品獨立卡片區塊 */
     .portfolio-section {
-      margin-bottom: 32px;
+      margin-bottom: 28px;
       padding: 20px;
       background-color: #0f172a;
       border-radius: 12px;
@@ -89,85 +122,71 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 16px;
+      margin-bottom: 8px;
     }
     .portfolio-title {
-      font-size: 16px;
+      font-size: 15px;
       font-weight: 600;
       color: #38bdf8;
     }
     .portfolio-badge {
-      font-size: 12px;
+      font-size: 11px;
       background-color: rgba(56, 189, 248, 0.1);
       color: #38bdf8;
-      padding: 4px 8px;
+      padding: 2px 6px;
       border-radius: 4px;
       border: 1px solid rgba(56, 189, 248, 0.3);
     }
     .portfolio-desc {
-      font-size: 13px;
+      font-size: 12px;
       color: #94a3b8;
       margin-bottom: 16px;
       line-height: 1.5;
     }
-    .portfolio-preview {
-      width: 100%;
-      height: 220px;
-      border-radius: 8px;
-      border: 1px solid #334155;
-      background-color: #1e293b;
-      overflow: hidden;
-      margin-bottom: 12px;
-    }
-    .portfolio-iframe {
-      width: 100%;
-      height: 100%;
-      border: none;
-    }
     .portfolio-link {
-      display: inline-block;
+      display: block;
       width: 100%;
       text-align: center;
-      padding: 10px;
-      background-color: #334155;
-      color: #38bdf8;
+      padding: 12px;
+      background-color: #0284c7;
+      color: #ffffff;
       text-decoration: none;
       font-size: 13px;
       font-weight: 600;
-      border-radius: 6px;
+      border-radius: 8px;
       transition: background-color 0.2s, transform 0.1s;
     }
     .portfolio-link:hover {
-      background-color: #475569;
+      background-color: #0369a1;
     }
     .portfolio-link:active {
       transform: scale(0.99);
     }
 
-    /* 憑什麼解決問題（自介與技術優勢）區塊 */
+    /* 憑什麼幫你解決（優勢說明）區塊 */
     .about-section {
-      margin-bottom: 32px;
-      padding: 20px;
+      margin-bottom: 28px;
+      padding: 18px;
       background-color: #0f172a;
       border-radius: 12px;
       border: 1px solid #334155;
     }
     .about-title {
-      font-size: 16px;
+      font-size: 15px;
       font-weight: 600;
       color: #10b981;
-      margin-bottom: 12px;
+      margin-bottom: 10px;
     }
     .about-list {
       list-style: none;
-      font-size: 13px;
+      font-size: 12px;
       color: #cbd5e1;
-      line-height: 1.8;
+      line-height: 1.7;
     }
     .about-list li {
-      margin-bottom: 8px;
+      margin-bottom: 6px;
       position: relative;
-      padding-left: 20px;
+      padding-left: 18px;
     }
     .about-list li::before {
       content: "✔";
@@ -178,23 +197,23 @@
     }
 
     .form-group {
-      margin-bottom: 20px;
+      margin-bottom: 16px;
     }
     label {
       display: block;
-      font-size: 14px;
+      font-size: 13px;
       font-weight: 600;
-      margin-bottom: 8px;
+      margin-bottom: 6px;
       color: #e2e8f0;
     }
     input, textarea {
       width: 100%;
-      padding: 12px 16px;
+      padding: 10px 14px;
       background-color: #0f172a;
       border: 1px solid #334155;
       border-radius: 8px;
       color: #ffffff;
-      font-size: 14px;
+      font-size: 13px;
       outline: none;
       transition: border-color 0.2s;
     }
@@ -203,16 +222,16 @@
     }
     textarea {
       resize: vertical;
-      min-height: 100px;
+      min-height: 90px;
     }
     button {
       width: 100%;
-      padding: 14px;
+      padding: 13px;
       background-color: #10b981;
       color: #ffffff;
       border: none;
       border-radius: 8px;
-      font-size: 16px;
+      font-size: 15px;
       font-weight: 600;
       cursor: pointer;
       transition: background-color 0.2s, transform 0.1s;
@@ -229,9 +248,9 @@
       transform: none;
     }
     .status-msg {
-      margin-top: 16px;
+      margin-top: 14px;
       text-align: center;
-      font-size: 14px;
+      font-size: 13px;
     }
     .success { color: #34d399; }
     .error { color: #f87171; }
@@ -239,64 +258,69 @@
 </head>
 <body>
 
+  <!-- 頂部輕量選單 -->
+  <nav class="navbar">
+    <a href="#services">核心服務</a>
+    <a href="#portfolio">作品展示</a>
+    <a href="#why-me">技術優勢</a>
+    <a href="#contact">預約諮詢</a>
+  </nav>
+
   <div class="container">
     <div class="header">
       <h1>預約免費自動化諮詢</h1>
       <p>告別重複手動 key 單！為你的業務打造 24h 自動化營運系統</p>
     </div>
 
-    <div class="features">
+    <!-- 01 服務區塊 -->
+    <div id="services" class="features">
       <div class="card">
-        <h3>01. 自動化到帳與資料同步</h3>
-        <p>顧客填單後，資料 0.1 秒自動降落至 Google Sheets。</p>
+        <h3>01. 自動化同步</h3>
+        <p>填單後資料 0.1 秒自動同步至 Google Sheets。</p>
       </div>
       <div class="card">
-        <h3>02. Telegram 即時通知</h3>
-        <p>新單抵達時，手機即時收到訊息通知，不漏單。</p>
+        <h3>02. Telegram 通知</h3>
+        <p>新單抵達時，手機即時發送通知不漏單。</p>
       </div>
       <div class="card">
-        <h3>03. 自動客戶致謝與跟進</h3>
-        <p>系統自動發送確認信件，提升客製化專業感。</p>
+        <h3>03. 自動跟進信件</h3>
+        <p>系統自動發送確認信，提升客製專業感。</p>
       </div>
     </div>
 
-    <!-- 實體作品 Card 區塊 -->
-    <div class="portfolio-section">
+    <!-- 02 作品獨立跳頁區塊 -->
+    <div id="portfolio" class="portfolio-section">
       <div class="portfolio-header">
-        <span class="portfolio-title">📌 精選作品展示：響應式互動 Card</span>
+        <span class="portfolio-title">📌 精選作品：響應式互動 Card</span>
         <span class="portfolio-badge">Live Demo</span>
       </div>
-      <p class="portfolio-desc">前端靈活排版與動態互動成果展示，兼具手機與電腦端完美載入體驗：</p>
-      
-      <!-- 作品即時預覽視窗 (大寫 CARD) -->
-      <div class="portfolio-preview">
-        <iframe src="https://crazymankey.github.io/CARD/" class="portfolio-iframe" title="Card 作品展示" loading="lazy"></iframe>
-      </div>
+      <p class="portfolio-desc">前端靈活排版與互動設計成果，點擊下方按鈕以全螢幕體驗完整獨立網頁：</p>
       
       <a href="https://crazymankey.github.io/CARD/" target="_blank" rel="noopener noreferrer" class="portfolio-link">
-        🔗 點擊全螢幕體驗 Card 作品 ↗
+        🔗 開啟獨立作品頁面 (CARD) ↗
       </a>
     </div>
 
-    <!-- 憑什麼幫你解決？（實力與解決方案證明） -->
-    <div class="about-section">
+    <!-- 03 技術優勢區塊 -->
+    <div id="why-me" class="about-section">
       <div class="about-title">⚡ 為什麼選擇我？憑什麼幫你省時省力：</div>
       <ul class="about-list">
-        <li><strong>前端全客製開發：</strong> 不用笨重的昂貴軟體，直接以輕量化 HTML/CSS/JS 打造專屬介面，載入速度極快。</li>
-        <li><strong>低程式碼與 API 串接實戰：</strong> 熟悉 n8n、Webhook 及系統串接，將原本需要 1 小時的手動 key 單流程縮短至 0.1 秒自動完成。</li>
-        <li><strong>注重流程效率：</strong> 以實務營運角度出發，幫你設計最乾淨、零漏單且不需要手動介入的標準自動化 SOP。</li>
+        <li><strong>前端全客製開發：</strong> 不用笨重模板，直接以輕量化 HTML/CSS/JS 打造極速介面。</li>
+        <li><strong>自動化與 API 串接：</strong> 精通 n8n、Webhook 與流程整合，將 1 小時手動工作縮短至 0.1 秒。</li>
+        <li><strong>標準化營運 SOP：</strong> 以實際業務邏輯出發，設計零漏單、不需要手動介入的自動化流程。</li>
       </ul>
     </div>
 
-    <form id="leadForm">
+    <!-- 04 表單區塊 -->
+    <form id="contact" id="leadForm">
       <div class="form-group">
         <label for="name">您的姓名 / 稱呼</label>
         <input type="text" id="name" required placeholder="例如：李先生">
       </div>
 
       <div class="form-group">
-        <label for="contact">聯絡方式 (LINE ID 或 Email)</label>
-        <input type="text" id="contact" required placeholder="例如：line_id_123 或 name@email.com">
+        <label for="contact-info">聯絡方式 (LINE ID 或 Email)</label>
+        <input type="text" id="contact-info" required placeholder="例如：line_id_123 或 name@email.com">
       </div>
 
       <div class="form-group">
@@ -333,7 +357,7 @@
 
       const formData = {
         name: document.getElementById('name').value,
-        contact: document.getElementById('contact').value,
+        contact: document.getElementById('contact-info').value,
         need: document.getElementById('need').value,
         timestamp: formattedTimestamp
       };
