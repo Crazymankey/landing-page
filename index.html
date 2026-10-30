@@ -14,6 +14,16 @@
   <meta property="og:description" content="填單資料 0.1 秒自動同步試算表與手機通知，省時省力不漏單。點擊預約免費自動化諮詢！">
   <meta property="og:type" content="website">
 
+  <!-- Google Schema.org 結構化資料 (加速 SEO 爬蟲識別) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "表單自動化串接服務",
+    "description": "提供 Google 試算表與 Telegram 自動化串接服務，告別手動Key單，實現 24 小時自動化營運。"
+  }
+  </script>
+
   <style>
     * {
       box-sizing: border-box;
@@ -311,9 +321,12 @@
       </ul>
     </div>
 
-    <!-- 04 表單區塊 (修復 id 重複問題) -->
+    <!-- 04 表單區塊 -->
     <div id="contact">
       <form id="leadForm">
+        <!-- 隱藏欄位：自動帶入來源標籤，方便未來 n8n 分流 -->
+        <input type="hidden" id="source" value="LandingPage_Consultation">
+
         <div class="form-group">
           <label for="name">您的姓名 / 稱呼</label>
           <input type="text" id="name" required placeholder="例如：李先生">
@@ -357,10 +370,12 @@
       const seconds = String(now.getSeconds()).padStart(2, '0');
       const formattedTimestamp = `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
 
+      // 完美保留你原有的欄位，並加上 source 隱藏屬性
       const formData = {
         name: document.getElementById('name').value,
         contact: document.getElementById('contact-info').value,
         need: document.getElementById('need').value,
+        source: document.getElementById('source').value,
         timestamp: formattedTimestamp
       };
 
