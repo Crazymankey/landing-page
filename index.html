@@ -144,6 +144,39 @@
       transform: scale(0.99);
     }
 
+    /* 憑什麼解決問題（自介與技術優勢）區塊 */
+    .about-section {
+      margin-bottom: 32px;
+      padding: 20px;
+      background-color: #0f172a;
+      border-radius: 12px;
+      border: 1px solid #334155;
+    }
+    .about-title {
+      font-size: 16px;
+      font-weight: 600;
+      color: #10b981;
+      margin-bottom: 12px;
+    }
+    .about-list {
+      list-style: none;
+      font-size: 13px;
+      color: #cbd5e1;
+      line-height: 1.8;
+    }
+    .about-list li {
+      margin-bottom: 8px;
+      position: relative;
+      padding-left: 20px;
+    }
+    .about-list li::before {
+      content: "✔";
+      position: absolute;
+      left: 0;
+      color: #10b981;
+      font-weight: bold;
+    }
+
     .form-group {
       margin-bottom: 20px;
     }
@@ -243,6 +276,16 @@
       <a href="https://crazymankey.github.io/CARD/" target="_blank" rel="noopener noreferrer" class="portfolio-link">
         🔗 點擊全螢幕體驗 Card 作品 ↗
       </a>
+    </div>
+
+    <!-- 憑什麼幫你解決？（實力與解決方案證明） -->
+    <div class="about-section">
+      <div class="about-title">⚡ 為什麼選擇我？憑什麼幫你省時省力：</div>
+      <ul class="about-list">
+        <li><strong>前端全客製開發：</strong> 不用笨重的昂貴軟體，直接以輕量化 HTML/CSS/JS 打造專屬介面，載入速度極快。</li>
+        <li><strong>低程式碼與 API 串接實戰：</strong> 熟悉 n8n、Webhook 及系統串接，將原本需要 1 小時的手動 key 單流程縮短至 0.1 秒自動完成。</li>
+        <li><strong>注重流程效率：</strong> 以實務營運角度出發，幫你設計最乾淨、零漏單且不需要手動介入的標準自動化 SOP。</li>
+      </ul>
     </div>
 
     <form id="leadForm">
