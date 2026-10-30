@@ -135,10 +135,13 @@
       font-size: 13px;
       font-weight: 600;
       border-radius: 6px;
-      transition: background-color 0.2s;
+      transition: background-color 0.2s, transform 0.1s;
     }
     .portfolio-link:hover {
       background-color: #475569;
+    }
+    .portfolio-link:active {
+      transform: scale(0.99);
     }
 
     .form-group {
@@ -179,14 +182,18 @@
       font-size: 16px;
       font-weight: 600;
       cursor: pointer;
-      transition: background-color 0.2s;
+      transition: background-color 0.2s, transform 0.1s;
     }
     button:hover {
       background-color: #059669;
     }
+    button:active {
+      transform: scale(0.99);
+    }
     button:disabled {
       background-color: #475569;
       cursor: not-allowed;
+      transform: none;
     }
     .status-msg {
       margin-top: 16px;
@@ -228,12 +235,12 @@
       </div>
       <p class="portfolio-desc">前端靈活排版與動態互動成果展示，兼具手機與電腦端完美載入體驗：</p>
       
-      <!-- 作品即時預覽視窗 (改為大寫 CARD) -->
+      <!-- 作品即時預覽視窗 (大寫 CARD) -->
       <div class="portfolio-preview">
-        <iframe src="https://crazymankey.github.io/CARD/" class="portfolio-iframe" title="Card 作品展示"></iframe>
+        <iframe src="https://crazymankey.github.io/CARD/" class="portfolio-iframe" title="Card 作品展示" loading="lazy"></iframe>
       </div>
       
-      <a href="https://crazymankey.github.io/CARD/" target="_blank" class="portfolio-link">
+      <a href="https://crazymankey.github.io/CARD/" target="_blank" rel="noopener noreferrer" class="portfolio-link">
         🔗 點擊全螢幕體驗 Card 作品 ↗
       </a>
     </div>
